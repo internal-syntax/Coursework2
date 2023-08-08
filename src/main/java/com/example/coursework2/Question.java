@@ -4,8 +4,8 @@ import java.util.Objects;
 
 public class Question {
 
-    private String questions;
-    private String answer;
+    private final String questions;
+    private final String answer;
 
     public Question(String questions, String answer) {
         this.questions = questions;
@@ -16,24 +16,8 @@ public class Question {
         return answer;
     }
 
-    public void setAnswer(String answer) {
-        this.answer = answer;
-    }
-
     public String getQuestions() {
         return questions;
-    }
-
-    public void setQuestions(String questions) {
-        this.questions = questions;
-    }
-
-    @Override
-    public String toString() {
-        return "Question{" +
-                "questions='" + questions + '\'' +
-                ", answer='" + answer + '\'' +
-                '}';
     }
 
     @Override
@@ -47,5 +31,13 @@ public class Question {
     @Override
     public int hashCode() {
         return Objects.hash(questions, answer);
+    }
+
+    @Override
+    public String toString() {
+        return "Question{" +
+                "questions='" + questions + '\'' +
+                ", answer='" + answer + '\'' +
+                '}';
     }
 }
